@@ -80,7 +80,10 @@ export const projects: Project[] = [
     ],
     highlights: [],
     chips: ["Web", "Projet personnel"],
-    link: { href: "https://www.kylianmthr.me", label: "kylianmthr.me" },
+    link: {
+      href: "https://cours.kylianmthr.me",
+      label: "cours.kylianmthr.me",
+    },
   },
   {
     slug: "agent-smith",
