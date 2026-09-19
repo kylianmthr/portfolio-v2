@@ -1,10 +1,10 @@
 export const site = {
-  name: "Zerrow",
+  name: "Kylian",
   role: "Développeur système & IA",
   location: "Nice, France",
   email: "kylian.mathurin@gmail.com",
-  github: "https://github.com/zerrow",
-  githubLabel: "github.com/zerrow",
+  github: "https://github.com/kylianmthr",
+  githubLabel: "github.com/kylianmthr",
 } as const;
 
 export const navLinks = [

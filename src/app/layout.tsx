@@ -17,11 +17,11 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Zerrow — Portfolio",
+  title: "Kylian — Portfolio",
   description:
-    "Portfolio de Zerrow, développeur système & IA à Nice. Projets en C, C++ et Python, de l'OS aux modèles de langage.",
+    "Portfolio de Kylian, développeur système & IA à Nice. Projets en C, C++ et Python, de l'OS aux modèles de langage.",
   openGraph: {
-    title: "Zerrow — Portfolio",
+    title: "Kylian — Portfolio",
     description:
       "Développeur système & IA à Nice. Projets en C, C++ et Python, de l'OS aux modèles de langage.",
     locale: "fr_FR",

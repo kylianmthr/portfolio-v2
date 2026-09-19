@@ -8,7 +8,7 @@ import {
 } from "@/lib/contact";
 import { contactEmailHtml, contactEmailText } from "@/lib/email-template";
 
-const FALLBACK_FROM = "Portfolio Zerrow <onboarding@resend.dev>";
+const FALLBACK_FROM = "Portfolio Kylian <onboarding@resend.dev>";
 
 function readField(formData: FormData, key: string): string {
   const value = formData.get(key);
