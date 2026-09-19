@@ -71,6 +71,17 @@
   }
 }
 
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -455,6 +466,165 @@
   }
   .rd5 {
     transition-delay: 0.4s;
+  }
+
+  /* ── Carte cliquable ── */
+  .card-interactive {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    font: inherit;
+    color: inherit;
+  }
+  .card-interactive .card-desc {
+    margin-bottom: 18px;
+  }
+  .card-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    /* Pushed to the bottom so the affordance lines up across a row of cards
+       whose descriptions differ in length. */
+    margin-top: auto;
+    padding-top: 22px;
+    font-family: var(--font-jakarta);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: hsla(255, 55%, 72%, 0.55);
+    transition:
+      color 0.28s,
+      gap 0.28s;
+  }
+  .card-interactive:hover .card-more,
+  .card-interactive:focus-visible .card-more {
+    color: hsl(255, 60%, 78%);
+    gap: 11px;
+  }
+
+  /* La carte mise en avant garde une bordure teintée au repos. */
+  .card-featured {
+    border-color: hsla(255, 55%, 72%, 0.16);
+    background:
+      linear-gradient(160deg, hsla(255, 65%, 80%, 0.035) 0%, transparent 60%),
+      rgba(12, 12, 12, 0.9);
+  }
+
+  /* ── Fiche projet ── */
+  .project-dialog {
+    width: min(640px, calc(100vw - 32px));
+    max-height: min(85vh, 760px);
+    /* Preflight zeroes every margin, which kills the `margin: auto` a native
+       dialog relies on to centre itself. */
+    margin: auto;
+    padding: 0;
+    border: 1px solid hsla(255, 55%, 72%, 0.16);
+    border-radius: 20px;
+    background: #0c0c0c;
+    color: #e4e4e4;
+    overflow: hidden;
+    box-shadow:
+      0 40px 90px rgba(0, 0, 0, 0.75),
+      0 0 60px hsla(255, 60%, 78%, 0.05);
+  }
+  .project-dialog::backdrop {
+    background: rgba(4, 4, 4, 0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .project-dialog[open] {
+    animation: dialog-in 0.28s cubic-bezier(0.2, 0, 0, 1);
+  }
+  .project-dialog-inner {
+    display: flex;
+    flex-direction: column;
+    max-height: inherit;
+    overflow-y: auto;
+    padding: 34px 36px 36px;
+  }
+  .project-dialog-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+    color: #6a6a6a;
+    cursor: pointer;
+    transition:
+      color 0.2s,
+      border-color 0.2s,
+      background 0.2s;
+  }
+  .project-dialog-close:hover {
+    color: #e4e4e4;
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .project-dialog-title {
+    font-family: var(--font-syne);
+    font-size: 30px;
+    font-weight: 700;
+    color: #f0f0f0;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .project-dialog-summary {
+    font-family: var(--font-jakarta);
+    font-size: 15px;
+    line-height: 1.7;
+    color: hsla(255, 55%, 78%, 0.85);
+    margin-bottom: 20px;
+  }
+  .project-dialog-text {
+    font-family: var(--font-jakarta);
+    font-size: 14px;
+    line-height: 1.85;
+    color: #8d8d8d;
+    margin-bottom: 14px;
+  }
+  .project-dialog-list {
+    margin: 6px 0 22px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .project-dialog-list li {
+    position: relative;
+    padding-left: 20px;
+    font-family: var(--font-jakarta);
+    font-size: 14px;
+    line-height: 1.7;
+    color: #9a9a9a;
+  }
+  .project-dialog-list li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: hsla(255, 55%, 72%, 0.55);
+  }
+
+  @media (max-width: 640px) {
+    .project-dialog-inner {
+      padding: 30px 24px 28px;
+    }
+    .project-dialog-title {
+      font-size: 25px;
+    }
   }
 }
 
