@@ -133,11 +133,13 @@ export function ProjectsGrid({ projects }: { projects: Project[] }) {
               </p>
             ))}
 
-            <ul className="project-dialog-list">
-              {active.highlights.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            {active.highlights.length > 0 && (
+              <ul className="project-dialog-list">
+                {active.highlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            )}
 
             <div className="mt-2 flex flex-wrap gap-2">
               {active.chips.map((chip) => (

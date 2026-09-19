@@ -66,99 +66,91 @@ export const projects: Project[] = [
     link: { href: "https://websparks.app", label: "websparks.app" },
   },
   {
-    slug: "philosophers",
-    tag: "C · OS",
-    title: "philosophers",
+    slug: "plateforme-cours",
+    tag: "Web · Produit",
+    title: "Plateforme de cours",
     description:
-      "Simulation du problème des philosophes avec threads, mutexes et gestion de la synchronisation.",
-    chips: ["C", "Threads", "Mutex"],
+      "Ma plateforme de cours en ligne, que je conçois et fais évoluer moi-même.",
     summary:
-      "Le problème du dîner des philosophes, résolu sans interblocage ni famine.",
+      "Publier mes cours sur ma propre plateforme plutôt que sur un service existant.",
     details: [
-      "Plusieurs philosophes partagent une table et doivent alterner entre penser, manger et dormir. Chacun a besoin de deux fourchettes pour manger, et chaque fourchette est partagée avec un voisin : c'est le cas d'école de l'accès concurrent à une ressource limitée.",
-      "Chaque philosophe tourne dans son propre thread, les fourchettes sont protégées par des mutexes, et un moniteur surveille en continu les temps de repas pour détecter une mort par inanition au bon moment.",
+      "Plutôt que de déposer mes cours sur une plateforme tierce, j'ai construit la mienne. J'en garde la maîtrise complète : la structure des contenus, leur mise en ligne et la manière dont ils sont présentés.",
     ],
-    highlights: [
-      "Un thread par philosophe, fourchettes protégées par mutex",
-      "Ordre de prise des fourchettes choisi pour éviter l'interblocage",
-      "Surveillance des délais pour détecter la famine sans course critique",
-    ],
+    highlights: [],
+    chips: ["Web", "Projet personnel"],
+    link: { href: "https://www.kylianmthr.me", label: "kylianmthr.me" },
   },
   {
-    slug: "cub3d",
-    tag: "C++ · Graphics",
-    title: "cub3D",
+    slug: "agent-smith",
+    tag: "Python · Agents",
+    title: "Agent Smith",
     description:
-      "Moteur de raycasting à la Wolfenstein 3D : rendu en temps réel, textures, minimap.",
-    chips: ["C++", "MiniLibX", "Raycasting"],
+      "Un framework d'agents qui résout des tâches Python en autonomie, du raisonnement à l'exécution en sandbox.",
+    chips: ["Python", "Agents", "MCP", "Sandbox"],
     summary:
-      "Un moteur de rendu 3D temps réel construit à partir d'une grille 2D.",
+      "Une boucle Pensée, Code, Observation, écrite sans framework d'orchestration.",
     details: [
-      "Le principe du raycasting : pour chaque colonne de pixels à l'écran, on lance un rayon depuis la caméra et on calcule où il rencontre un mur. La distance obtenue donne la hauteur du mur à dessiner, ce qui suffit à reconstruire une scène en relief à partir d'un plan.",
-      "La scène est décrite dans un fichier de configuration : disposition de la carte, textures des quatre orientations de murs, couleurs du sol et du plafond, position et direction de départ du joueur.",
+      "Agent Smith dépasse la génération de code en un seul coup. Le modèle raisonne sur une tâche et écrit du Python, ce code est exécuté dans un sandbox isolé, et le résultat de cette exécution devient le contexte de l'itération suivante. La boucle tourne jusqu'à ce que le modèle appelle lui-même final_answer.",
+      "Le même cœur d'agent alimente deux applications en ligne de commande : l'une résout des problèmes algorithmiques courts (MBPP), l'autre explore un dépôt réel, modifie des fichiers, lance les tests et renvoie un patch Git (SWE-bench). Projet réalisé en binôme dans le cadre du cursus 42.",
     ],
     highlights: [
-      "Rendu colonne par colonne, avec correction de la distorsion en bord d'écran",
-      "Textures appliquées selon l'orientation du mur touché",
-      "Déplacement et rotation fluides, avec détection des collisions",
+      "Boucle d'agent écrite de zéro, sans framework d'orchestration externe",
+      "Code généré exécuté dans un sandbox isolé, jamais dans le processus principal",
+      "Outils exposés via MCP, en stdio comme en HTTP",
+      "Chaque run produit un rapport : tokens, latences, relances, sorties brutes",
     ],
+    link: {
+      href: "https://github.com/kylianmthr/AgentSmith",
+      label: "Voir sur GitHub",
+    },
   },
   {
-    slug: "ft-linear-regression",
-    tag: "Python · IA",
-    title: "ft_linear_regression",
+    slug: "rag-42",
+    tag: "Python · RAG",
+    title: "rag-42",
     description:
-      "Implémentation from scratch d'une régression linéaire avec gradient descent et visualisation.",
-    chips: ["Python", "ML", "NumPy"],
+      "Un moteur de questions-réponses sur le dépôt vLLM : recherche hybride, reranking et réponses sourcées.",
+    chips: ["Python", "ChromaDB", "BM25", "Qwen3"],
     summary:
-      "Une régression linéaire écrite à la main, sans bibliothèque de machine learning.",
+      "Interroger en langage naturel le code et la documentation de vLLM, avec des réponses appuyées sur des sources.",
     details: [
-      "Premier contact avec l'apprentissage automatique : prédire le prix d'une voiture à partir de son kilométrage. Le modèle est volontairement écrit de zéro, sans scikit-learn, pour que chaque étape du calcul reste visible.",
-      "L'entraînement se fait par descente de gradient : on mesure l'erreur du modèle, on calcule dans quelle direction ajuster chaque paramètre, et on répète jusqu'à convergence. La visualisation de la droite et de la courbe d'erreur rend le processus concret.",
+      "Le système indexe le code Python et la documentation Markdown du dépôt vLLM, puis répond à des questions techniques en s'appuyant uniquement sur ce qu'il a retrouvé. Le découpage s'adapte à la nature du contenu : par blocs logiques pour le code, par titres et paragraphes pour la documentation.",
+      "La recherche combine deux approches complémentaires. Le lexical (BM25) retrouve les noms de fonctions et les identifiants exacts, le vectoriel capte le sens d'une question même quand les mots ne correspondent pas. Un cross-encoder reclasse ensuite les résultats pour ne transmettre au modèle que le contexte le plus pertinent.",
     ],
     highlights: [
-      "Descente de gradient implémentée à la main, sans bibliothèque de ML",
-      "Normalisation des données pour stabiliser la convergence",
-      "Visualisation de la droite obtenue et de l'évolution de l'erreur",
+      "Double index : BM25 pour le lexical, ChromaDB pour le vectoriel",
+      "Reranking par cross-encoder avant transmission du contexte au modèle",
+      "Recall@5 de 83 % sur la documentation et 63 % sur le code",
+      "Indexation complète du dépôt en 3 à 4 minutes 30",
     ],
+    link: {
+      href: "https://github.com/kylianmthr/rag-42",
+      label: "Voir sur GitHub",
+    },
   },
   {
-    slug: "ft-irc",
-    tag: "C++ · Réseau",
-    title: "ft_irc",
+    slug: "callmemaybe",
+    tag: "Python · LLM",
+    title: "Call Me Maybe",
     description:
-      "Serveur IRC complet gérant connexions multiples, canaux, modes utilisateurs et opérateurs.",
-    chips: ["C++", "Sockets", "IRC"],
+      "Traduit une phrase en appel de fonction structuré, avec un JSON valide garanti par décodage contraint.",
+    chips: ["Python", "Décodage contraint", "Pydantic"],
     summary:
-      "Un serveur IRC conforme au protocole, capable de tenir plusieurs clients à la fois.",
+      "Du langage naturel vers un appel de fonction exécutable, sans jamais produire de JSON invalide.",
     details: [
-      "Le serveur suit le protocole IRC et se connecte avec de vrais clients du commerce. Il gère l'authentification, les pseudos, les canaux, les messages privés, ainsi que les droits d'opérateur : invitation, expulsion, changement de sujet, modes de canal.",
-      "Tout tourne sur un seul thread, autour d'un multiplexage d'entrées-sorties non bloquantes : une seule boucle surveille toutes les connexions et ne traite que celles qui ont quelque chose à dire. Un client lent ne bloque jamais les autres.",
+      "Un modèle de langage produit du texte libre, donc parfois du JSON cassé. Ici la structure n'est pas espérée, elle est imposée : un automate détermine à chaque étape quels caractères sont syntaxiquement admissibles, et les tokens qui violeraient cette structure voient leur probabilité ramenée à zéro avant le tirage.",
+      "Le modèle ne peut donc littéralement pas sortir du format attendu. C'est ce qui permet d'obtenir une fiabilité de production avec un modèle de 0,6 milliard de paramètres, là où l'approche naïve demanderait un modèle bien plus lourd.",
     ],
     highlights: [
-      "Boucle d'événements non bloquante, sans un thread par client",
-      "Découpage des commandes reçues par morceaux, indépendant des limites TCP",
-      "Canaux, modes, droits d'opérateur et messages privés",
+      "Automate qui restreint, à chaque étape, les tokens syntaxiquement valides",
+      "Masquage des logits : les tokens invalides sont écartés avant le tirage",
+      "100 % de sorties JSON valides, par construction",
+      "Plus de 90 % de précision sur le choix de la fonction et de ses arguments",
     ],
-  },
-  {
-    slug: "ft-turing",
-    tag: "Python · Théorie",
-    title: "ft_turing",
-    description:
-      "Machine de Turing universelle : exécution de programmes arbitraires sur un ruban infini.",
-    chips: ["Python", "Théorie", "Automate"],
-    summary:
-      "Une machine de Turing qui exécute n'importe quelle machine décrite en entrée.",
-    details: [
-      "Une machine de Turing lit et écrit sur un ruban infini en se déplaçant case par case, en suivant une table de transitions. Aussi rudimentaire que cela paraisse, ce modèle définit ce qu'un ordinateur peut calculer.",
-      "Le programme prend en entrée la description d'une machine (alphabet, états, transitions) et une bande initiale, puis l'exécute pas à pas. La machine simulée n'est donc pas codée en dur : elle est une donnée parmi d'autres.",
-    ],
-    highlights: [
-      "Machines décrites en données, jamais codées en dur",
-      "Validation de la description avant exécution, avec erreurs explicites",
-      "Affichage du ruban à chaque étape pour suivre le calcul",
-    ],
+    link: {
+      href: "https://github.com/kylianmthr/callmemaybe",
+      label: "Voir sur GitHub",
+    },
   },
 ];
 
