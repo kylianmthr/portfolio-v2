@@ -18,6 +18,7 @@ export const stats = [
   { value: "42", label: "Projets complétés", wide: false },
   { value: "3+", label: "Années de code", wide: false },
   { value: "École 42", label: "Formation en cours · Nice", wide: true },
+  { value: "Licence de maths", label: "L1 en cours", wide: true },
 ] as const;
 
 export type ProjectLink = { href: string; label: string };
@@ -164,8 +165,14 @@ export const projects: Project[] = [
 export type SkillGroup = { label: string; items: string[] };
 
 export const skillGroups: SkillGroup[] = [
-  { label: "Langages", items: ["C", "C++", "Python", "Bash", "JavaScript"] },
-  { label: "Systèmes", items: ["Linux", "POSIX", "Docker", "Make", "GDB"] },
-  { label: "IA / Data", items: ["PyTorch", "NumPy", "Pandas", "Sklearn"] },
-  { label: "Outils", items: ["Git", "VSCode", "Vim", "GitHub"] },
+  { label: "Langages", items: ["C", "Rust", "Python"] },
+  {
+    label: "Systèmes",
+    items: ["Linux", "macOS", "POSIX", "Docker", "Make", "GDB"],
+  },
+  {
+    label: "IA / Data",
+    items: ["PyTorch", "NumPy", "Pandas", "Sklearn", "Pydantic"],
+  },
+  { label: "Outils", items: ["Git", "Vim / Neovim", "VSCode", "GitHub"] },
 ];

@@ -15,16 +15,19 @@ export function About() {
             className="mt-6 max-w-[460px] text-[15px]"
             style={{ color: "#303030", lineHeight: 1.85 }}
           >
-            Étudiant à l&apos;École 42, je construis des outils robustes en C, C++
-            et Python. Ma curiosité m&apos;emmène des entrailles du système
-            d&apos;exploitation jusqu&apos;aux architectures de modèles de langage.
+            Étudiant à l&apos;École 42 et en licence de mathématiques, je
+            programme en C, en Rust et en Python. Ce qui m&apos;intéresse, c&apos;est
+            le bas niveau : la gestion de la mémoire, ce qu&apos;un programme
+            demande réellement à la machine, et ce que coûte chaque abstraction
+            qu&apos;on empile au-dessus.
           </p>
           <p
             className="mt-4 max-w-[460px] text-[15px]"
             style={{ color: "#303030", lineHeight: 1.85 }}
           >
-            J&apos;aime comprendre comment les choses fonctionnent vraiment,
-            qu&apos;il s&apos;agisse d&apos;un scheduler ou d&apos;un transformer.
+            L&apos;IA m&apos;attire pour la même raison. Plutôt que d&apos;assembler
+            des bibliothèques, je réimplémente les algorithmes depuis zéro pour
+            voir ce qui se passe vraiment quand un modèle apprend.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-[14px] max-sm:flex-col">

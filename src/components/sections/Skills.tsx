@@ -8,7 +8,7 @@ export function Skills() {
       <p className="s-tag reveal">Compétences</p>
       <div className="s-sep reveal rd1" />
       <h2 className="s-title reveal rd2">
-        Mon <span className="grad">arsenal</span>
+        Mon <span className="grad">environnement</span>
       </h2>
 
       <div className="mt-12 grid grid-cols-4 gap-[18px] max-lg:grid-cols-2 max-sm:grid-cols-1">
