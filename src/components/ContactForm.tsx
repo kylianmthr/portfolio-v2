@@ -86,7 +86,7 @@ export function ContactForm() {
 
   return (
     <form action={formAction} noValidate className="flex flex-col gap-[14px]">
-      {/* Honeypot — hidden from users, catches naive bots. */}
+      {/* Honeypot: hidden from users, catches naive bots. */}
       <input
         type="text"
         name="company"

@@ -23,7 +23,7 @@ export function About() {
             className="mt-4 max-w-[460px] text-[15px]"
             style={{ color: "#303030", lineHeight: 1.85 }}
           >
-            J&apos;aime comprendre comment les choses fonctionnent vraiment —
+            J&apos;aime comprendre comment les choses fonctionnent vraiment,
             qu&apos;il s&apos;agisse d&apos;un scheduler ou d&apos;un transformer.
           </p>
 

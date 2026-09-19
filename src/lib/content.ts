@@ -54,7 +54,7 @@ export const projects: Project[] = [
     summary:
       "Une agence web de proximité, pensée pour les petites entreprises niçoises.",
     details: [
-      "WebSparks est l'agence web que j'ai fondée. L'objectif est simple : donner aux petites entreprises de Nice — commerces, artisans, indépendants — une présence en ligne qui leur ressemble, sans les budgets ni les délais des grosses structures.",
+      "WebSparks est l'agence web que j'ai fondée. L'objectif est simple : donner aux petites entreprises de Nice (commerces, artisans, indépendants) une présence en ligne qui leur ressemble, sans les budgets ni les délais des grosses structures.",
       "Beaucoup de ces entreprises n'ont pas de site, ou un site qui ne leur apporte rien. Je travaille en local, en direct avec le dirigeant, pour livrer quelque chose qu'il comprend et dont il garde la main.",
     ],
     highlights: [
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     tag: "C++ · Graphics",
     title: "cub3D",
     description:
-      "Moteur de raycasting à la Wolfenstein 3D — rendu en temps réel, textures, minimap.",
+      "Moteur de raycasting à la Wolfenstein 3D : rendu en temps réel, textures, minimap.",
     chips: ["C++", "MiniLibX", "Raycasting"],
     summary:
       "Un moteur de rendu 3D temps réel construit à partir d'une grille 2D.",
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     summary:
       "Une régression linéaire écrite à la main, sans bibliothèque de machine learning.",
     details: [
-      "Premier contact avec l'apprentissage automatique : prédire le prix d'une voiture à partir de son kilométrage. Le modèle est volontairement écrit de zéro — pas de scikit-learn — pour que chaque étape du calcul reste visible.",
+      "Premier contact avec l'apprentissage automatique : prédire le prix d'une voiture à partir de son kilométrage. Le modèle est volontairement écrit de zéro, sans scikit-learn, pour que chaque étape du calcul reste visible.",
       "L'entraînement se fait par descente de gradient : on mesure l'erreur du modèle, on calcule dans quelle direction ajuster chaque paramètre, et on répète jusqu'à convergence. La visualisation de la droite et de la courbe d'erreur rend le processus concret.",
     ],
     highlights: [
@@ -145,13 +145,13 @@ export const projects: Project[] = [
     tag: "Python · Théorie",
     title: "ft_turing",
     description:
-      "Machine de Turing universelle — exécution de programmes arbitraires sur un ruban infini.",
+      "Machine de Turing universelle : exécution de programmes arbitraires sur un ruban infini.",
     chips: ["Python", "Théorie", "Automate"],
     summary:
       "Une machine de Turing qui exécute n'importe quelle machine décrite en entrée.",
     details: [
       "Une machine de Turing lit et écrit sur un ruban infini en se déplaçant case par case, en suivant une table de transitions. Aussi rudimentaire que cela paraisse, ce modèle définit ce qu'un ordinateur peut calculer.",
-      "Le programme prend en entrée la description d'une machine — alphabet, états, transitions — et une bande initiale, puis l'exécute pas à pas. La machine simulée n'est donc pas codée en dur : elle est une donnée parmi d'autres.",
+      "Le programme prend en entrée la description d'une machine (alphabet, états, transitions) et une bande initiale, puis l'exécute pas à pas. La machine simulée n'est donc pas codée en dur : elle est une donnée parmi d'autres.",
     ],
     highlights: [
       "Machines décrites en données, jamais codées en dur",

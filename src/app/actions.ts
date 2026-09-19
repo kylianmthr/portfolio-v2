@@ -78,7 +78,7 @@ export async function sendContactMessage(
 
     return {
       status: "success",
-      message: "Message envoyé — je vous réponds très vite.",
+      message: "Message envoyé, je vous réponds très vite.",
       fieldErrors: {},
     };
   } catch (cause) {

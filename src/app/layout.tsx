@@ -17,11 +17,11 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Kylian — Portfolio",
+  title: "Kylian · Portfolio",
   description:
     "Portfolio de Kylian, développeur système & IA à Nice. Projets en C, C++ et Python, de l'OS aux modèles de langage.",
   openGraph: {
-    title: "Kylian — Portfolio",
+    title: "Kylian · Portfolio",
     description:
       "Développeur système & IA à Nice. Projets en C, C++ et Python, de l'OS aux modèles de langage.",
     locale: "fr_FR",

@@ -37,7 +37,7 @@ export function ProjectsGrid({ projects }: { projects: Project[] }) {
   const [active, setActive] = useState<Project | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  // Drive the native <dialog> from state — it gives us Escape, focus
+  // Drive the native <dialog> from state: it gives us Escape, focus
   // containment and an inert background for free.
   useEffect(() => {
     const dialog = dialogRef.current;

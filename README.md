@@ -1,4 +1,4 @@
-# Kylian — Portfolio
+# Kylian · Portfolio
 
 Portfolio personnel construit avec **Next.js 16** (App Router), **Tailwind CSS 4**
 et **TypeScript**. Le formulaire de contact envoie les messages par email via
@@ -25,7 +25,7 @@ Trois variables d'environnement, à placer dans `.env.local` :
 | -------------------- | ------------------------------------------------------------- |
 | `RESEND_API_KEY`     | Clé API créée sur https://resend.com/api-keys                  |
 | `CONTACT_TO_EMAIL`   | Adresse qui reçoit les messages                                |
-| `CONTACT_FROM_EMAIL` | Expéditeur — son domaine doit être vérifié dans Resend         |
+| `CONTACT_FROM_EMAIL` | Expéditeur, dont le domaine doit être vérifié dans Resend      |
 
 Pour `CONTACT_FROM_EMAIL`, `onboarding@resend.dev` fonctionne sans vérification
 de domaine et convient pour tester. En production, vérifiez votre domaine dans
@@ -34,7 +34,7 @@ Resend puis utilisez une adresse de ce domaine, par exemple
 
 Si `RESEND_API_KEY` ou `CONTACT_TO_EMAIL` est absente, le site fonctionne
 normalement et le formulaire affiche un message invitant à écrire directement
-par email — aucune erreur n'est renvoyée au visiteur.
+par email, aucune erreur n'est renvoyée au visiteur.
 
 Le champ `Reply-To` de l'email est celui du visiteur : répondre à l'email reçu
 répond directement à la personne.
