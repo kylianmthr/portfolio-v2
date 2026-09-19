@@ -19,7 +19,7 @@ const EMPTY_FIELDS: ContactFields = {
 function FieldError({ id, error }: { id: string; error?: string }) {
   if (!error) return null;
   return (
-    <p id={id} className="font-jakarta text-xs" style={{ color: "#c86b6b" }}>
+    <p id={id} className="font-body text-xs" style={{ color: "#c86b6b" }}>
       {error}
     </p>
   );
@@ -185,7 +185,7 @@ export function ContactForm() {
       <p
         role="status"
         aria-live="polite"
-        className="font-jakarta min-h-[18px] text-[13px]"
+        className="font-body min-h-[18px] text-[13px]"
         style={{
           color: state.status === "success" ? "hsl(255,60%,76%)" : "#c86b6b",
         }}

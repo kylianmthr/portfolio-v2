@@ -1,18 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Syne } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import "./globals.css";
 
-const syne = Syne({
+/** Display face: hero wordmark, section and card titles. */
+const display = Syne({
   subsets: ["latin"],
-  weight: ["700", "800"],
-  variable: "--font-syne-google",
+  weight: ["400", "700", "800"],
+  variable: "--font-display-google",
   display: "swap",
 });
 
-const jakarta = Plus_Jakarta_Sans({
+/** Body face. Inter is drawn for small sizes on screen: tall x-height,
+ *  open apertures, and letterforms that stay distinct at 13-15px. */
+const body = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-jakarta-google",
+  variable: "--font-body-google",
   display: "swap",
 });
 
@@ -38,7 +41,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" className={`${syne.variable} ${jakarta.variable}`}>
+    <html lang="fr" className={`${display.variable} ${body.variable}`}>
       <body>{children}</body>
     </html>
   );

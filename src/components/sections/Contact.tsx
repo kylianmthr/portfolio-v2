@@ -14,7 +14,7 @@ export function Contact() {
           </h2>
           <p
             className="mt-[22px] max-w-[400px] text-[15px]"
-            style={{ color: "#303030", lineHeight: 1.85 }}
+            style={{ color: "#b4b4b4", lineHeight: 1.85 }}
           >
             Disponible pour des opportunités de stage, des projets freelance ou
             simplement une bonne conversation sur la tech.
@@ -24,7 +24,7 @@ export function Contact() {
             <a
               href={`mailto:${site.email}`}
               className="f-link flex items-center gap-[10px] text-sm"
-              style={{ color: "#363636", fontSize: 14 }}
+              style={{ color: "#b4b4b4", fontSize: 14 }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
                 <path
@@ -47,7 +47,7 @@ export function Contact() {
               target="_blank"
               rel="noreferrer noopener"
               className="f-link flex items-center gap-[10px]"
-              style={{ color: "#363636", fontSize: 14 }}
+              style={{ color: "#b4b4b4", fontSize: 14 }}
             >
               <svg
                 width="16"

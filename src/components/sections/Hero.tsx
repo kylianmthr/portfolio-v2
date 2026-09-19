@@ -36,7 +36,7 @@ export function Hero() {
 
       <div className="animate-fade-up relative z-1 text-center">
         <h1
-          className="grad font-syne"
+          className="grad font-display"
           style={{
             fontSize: "clamp(52px,11vw,148px)",
             fontWeight: 800,
@@ -54,11 +54,11 @@ export function Hero() {
           }}
         />
         <p
-          className="font-syne"
+          className="font-display"
           style={{
             fontSize: "clamp(13px,1.5vw,17px)",
             fontWeight: 400,
-            color: "#2a2a2a",
+            color: "#9a9a9a",
             letterSpacing: "2px",
           }}
         >
@@ -71,8 +71,8 @@ export function Hero() {
         className="animate-bounce-arrow absolute bottom-[52px] left-1/2 flex flex-col items-center gap-[9px] no-underline"
       >
         <span
-          className="font-jakarta text-[10px] font-semibold uppercase"
-          style={{ color: "#202020", letterSpacing: "3px" }}
+          className="font-body text-[10px] font-semibold uppercase"
+          style={{ color: "#808080", letterSpacing: "3px" }}
         >
           Scroll
         </span>

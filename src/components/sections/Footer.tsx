@@ -5,8 +5,8 @@ export function Footer() {
     <footer className="relative z-1 border-t border-white/[0.04]">
       <div className="flex items-center justify-between px-[120px] py-7 max-lg:px-[clamp(32px,6vw,80px)] max-sm:flex-col max-sm:gap-[14px] max-sm:p-6 max-sm:text-center">
         <span
-          className="font-syne text-[13px] font-bold"
-          style={{ color: "#1e1e1e" }}
+          className="font-display text-[13px] font-bold"
+          style={{ color: "#b4b4b4" }}
         >
           {site.name}.
         </span>
@@ -19,7 +19,7 @@ export function Footer() {
           ))}
         </nav>
 
-        <span className="font-jakarta text-xs" style={{ color: "#1a1a1a" }}>
+        <span className="font-body text-xs" style={{ color: "#9a9a9a" }}>
           © {new Date().getFullYear()} {site.fullName}
         </span>
       </div>

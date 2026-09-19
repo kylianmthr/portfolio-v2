@@ -13,7 +13,7 @@ export function About() {
           </h2>
           <p
             className="mt-6 max-w-[460px] text-[15px]"
-            style={{ color: "#303030", lineHeight: 1.85 }}
+            style={{ color: "#b4b4b4", lineHeight: 1.85 }}
           >
             <strong className="about-name">Kylian Mathurin</strong>, étudiant
             à l&apos;École 42 et en licence de mathématiques. Je programme en C,
@@ -24,7 +24,7 @@ export function About() {
           </p>
           <p
             className="mt-4 max-w-[460px] text-[15px]"
-            style={{ color: "#303030", lineHeight: 1.85 }}
+            style={{ color: "#b4b4b4", lineHeight: 1.85 }}
           >
             L&apos;IA m&apos;attire pour la même raison. Plutôt que d&apos;assembler
             des bibliothèques, je réimplémente les algorithmes depuis zéro pour

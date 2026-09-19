@@ -70,8 +70,8 @@ export function Navbar() {
           <a
             href="#hero"
             onMouseEnter={moveFrame}
-            className="nav-link font-syne max-sm:!px-[10px] max-sm:!text-xs"
-            style={{ color: "#c8c8c8", fontWeight: 700, fontSize: 14 }}
+            className="nav-link font-display max-sm:!px-[10px] max-sm:!text-xs"
+            style={{ color: "#e8e8e8", fontWeight: 700, fontSize: 14 }}
           >
             {site.name}
           </a>

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-syne: var(--font-syne-google), sans-serif;
-  --font-jakarta: var(--font-jakarta-google), sans-serif;
+  --font-display: var(--font-display-google), sans-serif;
+  --font-body: var(--font-body-google), sans-serif;
 
   --color-accent: hsl(255 55% 72%);
   --color-accent-bright: hsl(255 60% 76%);
@@ -93,7 +93,7 @@
     background-size: 30px 30px;
     color: #e4e4e4;
     overflow-x: hidden;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
   }
 
   section {
@@ -146,13 +146,13 @@
   .nav-link {
     position: relative;
     z-index: 1;
-    color: #444;
+    color: #9a9a9a;
     text-decoration: none;
     font-size: 13px;
     font-weight: 500;
     padding: 7px 16px;
     border-radius: 50px;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     transition: color 0.2s;
     white-space: nowrap;
   }
@@ -162,7 +162,7 @@
 
   /* Le nom complet, un cran plus lisible que le corps de texte. */
   .about-name {
-    color: #8e8e8e;
+    color: #e8e8e8;
     font-weight: 600;
   }
 
@@ -171,9 +171,9 @@
     font-size: 11px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: hsla(255, 55%, 72%, 0.7);
+    color: hsla(255, 55%, 72%, 0.95);
     font-weight: 600;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
   }
   .s-sep {
     width: 44px;
@@ -183,7 +183,7 @@
     margin: 12px 0 28px;
   }
   .s-title {
-    font-family: var(--font-syne);
+    font-family: var(--font-display);
     font-size: clamp(28px, 4vw, 42px);
     font-weight: 700;
     color: #f0f0f0;
@@ -247,7 +247,7 @@
     color: #fff;
   }
   .card:hover .card-desc {
-    color: #555;
+    color: #d0d0d0;
   }
 
   .card-tag {
@@ -256,11 +256,11 @@
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 14px;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     color: hsl(255, 55%, 72%);
   }
   .card-title {
-    font-family: var(--font-syne);
+    font-family: var(--font-display);
     font-size: 22px;
     font-weight: 700;
     color: #d8d8d8;
@@ -269,10 +269,10 @@
   }
   .card-desc {
     font-size: 14px;
-    color: #3a3a3a;
+    color: #b4b4b4;
     line-height: 1.8;
     margin-bottom: 22px;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     transition: color 0.25s;
   }
 
@@ -285,8 +285,8 @@
     border: 1px solid rgba(255, 255, 255, 0.07);
     background: rgba(255, 255, 255, 0.03);
     font-size: 12px;
-    color: #555;
-    font-family: var(--font-jakarta);
+    color: #b4b4b4;
+    font-family: var(--font-body);
     font-weight: 500;
   }
 
@@ -307,7 +307,7 @@
     background: hsla(255, 55%, 72%, 0.045);
   }
   .stat-num {
-    font-family: var(--font-syne);
+    font-family: var(--font-display);
     font-size: 40px;
     font-weight: 800;
     line-height: 1;
@@ -315,9 +315,9 @@
   }
   .stat-lbl {
     font-size: 13px;
-    color: #2e2e2e;
+    color: #9a9a9a;
     margin-top: 6px;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
   }
 
   /* ── Groupes de compétences ── */
@@ -337,7 +337,7 @@
     background: hsla(255, 55%, 72%, 0.04);
   }
   .skill-g-label {
-    font-family: var(--font-syne);
+    font-family: var(--font-display);
     font-size: 14px;
     font-weight: 700;
     color: hsl(255, 55%, 72%);
@@ -358,7 +358,7 @@
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     transition:
       box-shadow 0.3s,
       background 0.3s,
@@ -384,11 +384,11 @@
     border-radius: 50px;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.07);
-    color: #3a3a3a;
+    color: #b4b4b4;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     transition:
       border-color 0.22s,
       color 0.22s;
@@ -407,7 +407,7 @@
     border: 1px solid hsla(255, 55%, 72%, 0.08);
     color: #d0d0d0;
     font-size: 14px;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     outline: none;
     resize: none;
     transition:
@@ -415,7 +415,7 @@
       background 0.25s;
   }
   .c-input::placeholder {
-    color: #262626;
+    color: #808080;
   }
   .c-input:focus {
     border-color: hsla(255, 55%, 72%, 0.28);
@@ -437,9 +437,9 @@
   /* ── Liens de pied de page ── */
   .f-link {
     font-size: 12px;
-    color: #2a2a2a;
+    color: #9a9a9a;
     text-decoration: none;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     transition: color 0.2s;
   }
   .f-link:hover {
@@ -496,7 +496,7 @@
        whose descriptions differ in length. */
     margin-top: auto;
     padding-top: 22px;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.3px;
@@ -563,7 +563,7 @@
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(255, 255, 255, 0.02);
-    color: #6a6a6a;
+    color: #9a9a9a;
     cursor: pointer;
     transition:
       color 0.2s,
@@ -576,7 +576,7 @@
     background: rgba(255, 255, 255, 0.05);
   }
   .project-dialog-title {
-    font-family: var(--font-syne);
+    font-family: var(--font-display);
     font-size: 30px;
     font-weight: 700;
     color: #f0f0f0;
@@ -584,17 +584,17 @@
     margin-bottom: 12px;
   }
   .project-dialog-summary {
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     font-size: 15px;
     line-height: 1.7;
     color: hsla(255, 55%, 78%, 0.85);
     margin-bottom: 20px;
   }
   .project-dialog-text {
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     font-size: 14px;
     line-height: 1.85;
-    color: #8d8d8d;
+    color: #b4b4b4;
     margin-bottom: 14px;
   }
   .project-dialog-list {
@@ -608,10 +608,10 @@
   .project-dialog-list li {
     position: relative;
     padding-left: 20px;
-    font-family: var(--font-jakarta);
+    font-family: var(--font-body);
     font-size: 14px;
     line-height: 1.7;
-    color: #9a9a9a;
+    color: #b4b4b4;
   }
   .project-dialog-list li::before {
     content: "";
