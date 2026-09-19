@@ -1,5 +1,7 @@
 export const site = {
+  /** Short form used as the wordmark in the hero, nav and footer. */
   name: "Kylian",
+  fullName: "Kylian Mathurin",
   role: "Développeur système & IA",
   location: "Nice, France",
   email: "kylian.mathurin@gmail.com",

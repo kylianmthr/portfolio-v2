@@ -160,6 +160,12 @@
     color: #e4e4e4;
   }
 
+  /* Le nom complet, un cran plus lisible que le corps de texte. */
+  .about-name {
+    color: #8e8e8e;
+    font-weight: 600;
+  }
+
   /* ── Libellés de section ── */
   .s-tag {
     font-size: 11px;

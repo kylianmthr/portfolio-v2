@@ -15,11 +15,12 @@ export function About() {
             className="mt-6 max-w-[460px] text-[15px]"
             style={{ color: "#303030", lineHeight: 1.85 }}
           >
-            Étudiant à l&apos;École 42 et en licence de mathématiques, je
-            programme en C, en Rust et en Python. Ce qui m&apos;intéresse, c&apos;est
-            le bas niveau : la gestion de la mémoire, ce qu&apos;un programme
-            demande réellement à la machine, et ce que coûte chaque abstraction
-            qu&apos;on empile au-dessus.
+            <strong className="about-name">Kylian Mathurin</strong>, étudiant
+            à l&apos;École 42 et en licence de mathématiques. Je programme en C,
+            en Rust et en Python. Ce qui m&apos;intéresse, c&apos;est le bas
+            niveau : la gestion de la mémoire, ce qu&apos;un programme demande
+            réellement à la machine, et ce que coûte chaque abstraction qu&apos;on
+            empile au-dessus.
           </p>
           <p
             className="mt-4 max-w-[460px] text-[15px]"

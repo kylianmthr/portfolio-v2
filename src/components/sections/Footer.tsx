@@ -20,7 +20,7 @@ export function Footer() {
         </nav>
 
         <span className="font-jakarta text-xs" style={{ color: "#1a1a1a" }}>
-          © {new Date().getFullYear()} {site.name}
+          © {new Date().getFullYear()} {site.fullName}
         </span>
       </div>
     </footer>

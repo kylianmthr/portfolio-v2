@@ -17,13 +17,14 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Kylian · Portfolio",
+  title: "Kylian Mathurin · Portfolio",
   description:
-    "Portfolio de Kylian, développeur système & IA à Nice. Projets en C, C++ et Python, de l'OS aux modèles de langage.",
+    "Portfolio de Kylian Mathurin, développeur système & IA à Nice. Projets en C, Rust et Python, du bas niveau aux modèles de langage.",
+  authors: [{ name: "Kylian Mathurin" }],
   openGraph: {
-    title: "Kylian · Portfolio",
+    title: "Kylian Mathurin · Portfolio",
     description:
-      "Développeur système & IA à Nice. Projets en C, C++ et Python, de l'OS aux modèles de langage.",
+      "Développeur système & IA à Nice. Projets en C, Rust et Python, du bas niveau aux modèles de langage.",
     locale: "fr_FR",
     type: "website",
   },
